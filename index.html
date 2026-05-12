@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profelink — Encuentra tu maestro ideal</title>
+  <meta name="description" content="Encuentra maestros verificados para clases particulares. Contacta directo por WhatsApp, sin intermediarios.">
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --azul: #2563EB;
+      --azul-dark: #1D4ED8;
+      --azul-bg: #EFF6FF;
+      --azul-border: #BFDBFE;
+      --verde: #16A34A;
+      --verde-bg: #F0FDF4;
+      --verde-border: #BBF7D0;
+      --texto: #0F172A;
+      --texto-2: #475569;
+      --texto-3: #94A3B8;
+      --borde: #E2E8F0;
+      --fondo: #F8FAFC;
+      --blanco: #FFFFFF;
+      --r: 10px;
+      --r-lg: 16px;
+      --r-pill: 999px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Geist', system-ui, sans-serif;
+      background: var(--fondo);
+      color: var(--texto);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: .4; transform: scale(.7); }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -400px 0; }
+      100% { background-position: 400px 0; }
+    }
+    @keyframes cardIn {
+      from { opacity: 0; transform: translateY(22px) scale(.98); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes searchPulse {
+      0%   { box-shadow: 0 0 0 0 rgba(37,99,235,.3); border-color: var(--azul-border); }
+      50%  { box-shadow: 0 0 0 6px rgba(37,99,235,.08); border-color: var(--azul); }
+      100% { box-shadow: 0 0 0 0 rgba(37,99,235,0); border-color: var(--azul-border); }
+    }
+    @keyframes chevronFloat {
+      0%, 100% { transform: translateY(0) translateX(-50%); opacity: .5; }
+      50%       { transform: translateY(7px) translateX(-50%); opacity: 1; }
+    }
+    .search-pulse { animation: searchPulse .6s ease; }
+
+    /* FLECHA SCROLL */
+    .scroll-hint {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: chevronFloat 2.2s ease-in-out infinite;
+      cursor: pointer;
+      opacity: .45;
+      transition: opacity .2s;
+      z-index: 1;
+    }
+    .scroll-hint:hover { opacity: .8; }
+    .scroll-hint svg { display: block; }
+    .hero-wrap { position: relative; padding-bottom: 60px; }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-24px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(24px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+    .a1 { animation: fadeUp .5s .05s both; }
+    .a2 { animation: fadeUp .5s .13s both; }
+    .a3 { animation: fadeUp .5s .21s both; }
+    .a4 { animation: fadeUp .5s .29s both; }
+    .a5 { animation: fadeUp .5s .37s both; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(248,250,252,.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--borde);
+      padding: 0 28px; height: 58px;
+      display: flex; align-items: center; justify-content: space-between;
+      animation: slideDown .4s both;
+    }
+    .logo { font-size: 17px; font-weight: 600; color: var(--azul); text-decoration: none; letter-spacing: -.2px; }
+    .logo span { color: var(--texto); font-weight: 400; }
+    .nav-links { display: flex; gap: 20px; list-style: none; }
+    .nav-links a { font-size: 13px; color: var(--texto-2); text-decoration: none; transition: color .15s; }
+    .nav-links a:hover { color: var(--azul); }
+    .btn-nav {
+      background: var(--azul); color: #fff; border: none; border-radius: var(--r-pill);
+      padding: 7px 17px; font-size: 13px; font-family: inherit; font-weight: 500;
+      cursor: pointer; text-decoration: none; display: inline-block;
+      transition: background .15s, transform .15s;
+    }
+    .btn-nav:hover { background: var(--azul-dark); transform: translateY(-1px); }
+
+    /* HERO */
+    .hero { padding: 72px 28px 52px; max-width: 660px; margin: 0 auto; text-align: center; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--blanco); border: 1px solid var(--borde);
+      border-radius: var(--r-pill); padding: 5px 14px;
+      font-size: 12px; color: var(--texto-2); margin-bottom: 26px;
+    }
+    .live { width: 7px; height: 7px; border-radius: 50%; background: var(--verde); animation: pulseDot 1.8s ease-in-out infinite; }
+    .hero h1 { font-size: clamp(30px, 5vw, 50px); font-weight: 600; line-height: 1.08; letter-spacing: -1.5px; margin-bottom: 16px; }
+    .hero h1 .hl { color: var(--azul); }
+    .hero p { font-size: 16px; color: var(--texto-2); line-height: 1.7; max-width: 420px; margin: 0 auto 34px; }
+    .hero-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--azul); color: #fff; border: none; border-radius: var(--r-pill);
+      padding: 11px 22px; font-size: 13px; font-family: inherit; font-weight: 500;
+      cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 7px;
+      transition: background .15s, transform .15s, box-shadow .15s;
+    }
+    .btn-primary:hover { background: var(--azul-dark); transform: translateY(-2px); box-shadow: 0 4px 14px rgba(37,99,235,.22); }
+    .btn-outline {
+      background: var(--blanco); color: var(--texto); border: 1px solid var(--borde); border-radius: var(--r-pill);
+      padding: 11px 22px; font-size: 13px; font-family: inherit; font-weight: 500;
+      cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 7px;
+      transition: border-color .15s, transform .15s;
+    }
+    .btn-outline:hover { border-color: var(--azul); transform: translateY(-2px); }
+
+    /* SEARCH */
+    .search-wrap { max-width: 740px; margin: 0 auto; padding: 0 28px 48px; }
+    .search-box {
+      background: var(--blanco); border: 1px solid var(--borde); border-radius: var(--r-lg);
+      padding: 13px; display: flex; gap: 8px; flex-wrap: wrap;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .search-box:focus-within { border-color: var(--azul-border); box-shadow: 0 0 0 3px rgba(37,99,235,.07); }
+    .search-box input, .search-box select {
+      flex: 1; min-width: 145px;
+      background: var(--fondo); border: 1px solid var(--borde); border-radius: var(--r);
+      padding: 8px 12px; font-size: 13px; font-family: inherit; color: var(--texto);
+      outline: none; transition: border-color .15s;
+    }
+    .search-box input:focus, .search-box select:focus { border-color: var(--azul); }
+    .search-box button {
+      background: var(--azul); color: #fff; border: none; border-radius: var(--r);
+      padding: 8px 18px; font-size: 13px; font-family: inherit; font-weight: 500;
+      cursor: pointer; white-space: nowrap; transition: background .15s;
+    }
+    .search-box button:hover { background: var(--azul-dark); }
+    .filters { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 11px; }
+    .filter-tag {
+      background: var(--blanco); border: 1px solid var(--borde); border-radius: var(--r-pill);
+      padding: 4px 12px; font-size: 12px; color: var(--texto-2);
+      cursor: pointer; font-family: inherit; transition: all .15s;
+    }
+    .filter-tag:hover, .filter-tag.active { background: var(--azul-bg); border-color: var(--azul-border); color: var(--azul); }
+
+    /* GRID */
+    .profes-section { max-width: 740px; margin: 0 auto; padding: 0 28px 48px; }
+    .section-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 16px; }
+    .section-head h2 { font-size: 17px; font-weight: 600; letter-spacing: -.3px; }
+    #contador { font-size: 12px; color: var(--texto-3); }
+    .profes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(215px, 1fr)); gap: 13px; }
+
+    /* empty */
+    .empty-state { grid-column: 1/-1; background: var(--blanco); border: 1px dashed var(--borde); border-radius: var(--r-lg); padding: 48px 24px; text-align: center; }
+    .empty-icon { width: 46px; height: 46px; border-radius: 50%; background: var(--azul-bg); border: 1px solid var(--azul-border); display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; font-size: 20px; }
+    .empty-state h3 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .empty-state p  { font-size: 13px; color: var(--texto-2); line-height: 1.6; margin-bottom: 20px; }
+
+    /* card */
+    .profe-card {
+      background: var(--blanco); border: 1px solid var(--borde); border-radius: var(--r-lg); padding: 17px;
+      position: relative; overflow: hidden; cursor: pointer;
+      transition: border-color .2s, transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s;
+    }
+    .profe-card:hover {
+      border-color: var(--azul-border);
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 12px 32px rgba(37,99,235,.12);
+    }
+    .card-in { animation: cardIn .4s both; }
+
+    /* MODAL */
+    @keyframes backdropIn { from { opacity:0; } to { opacity:1; } }
+    @keyframes modalIn { from { opacity:0; transform: scale(.92) translateY(16px); } to { opacity:1; transform: scale(1) translateY(0); } }
+
+    .modal-backdrop {
+      position: fixed; inset: 0; z-index: 900;
+      background: rgba(15,23,42,.55);
+      backdrop-filter: blur(4px);
+      display: flex; align-items: center; justify-content: center;
+      padding: 20px;
+      animation: backdropIn .2s both;
+    }
+    .modal-backdrop.closing { animation: backdropIn .18s reverse both; }
+
+    .modal-card {
+      background: var(--blanco); border-radius: 20px;
+      padding: 28px; width: 100%; max-width: 400px;
+      max-height: 90vh; overflow-y: auto;
+      position: relative;
+      box-shadow: 0 24px 60px rgba(0,0,0,.18);
+      animation: modalIn .25s cubic-bezier(.34,1.4,.64,1) both;
+    }
+    .modal-close {
+      position: absolute; top: 14px; right: 14px;
+      width: 30px; height: 30px; border-radius: 50%;
+      background: var(--fondo); border: 1px solid var(--borde);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 16px; color: var(--texto-2);
+      transition: background .15s;
+    }
+    .modal-close:hover { background: var(--borde); }
+    .modal-avatar { width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 600; margin-bottom: 14px; overflow: hidden; }
+    .modal-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+    .modal-nombre { font-size: 18px; font-weight: 600; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+    .modal-materia { font-size: 13px; color: var(--texto-2); margin-bottom: 10px; }
+    .modal-stars { font-size: 13px; color: #F59E0B; margin-bottom: 12px; }
+    .modal-stars span { color: var(--texto-3); font-size: 12px; }
+    .modal-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+    .modal-divider { height: 1px; background: var(--borde); margin: 16px 0; }
+    .modal-resenas-title { font-size: 12px; font-weight: 600; color: var(--texto-2); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; }
+    .modal-resenas-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+    .modal-resena { background: var(--fondo); border-radius: var(--r); padding: 10px 12px; font-size: 12px; color: var(--texto-2); line-height: 1.5; }
+    .modal-resena-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+    .modal-resena-autor { font-weight: 600; color: var(--texto); font-size: 12px; }
+    .modal-resena-stars { color: #F59E0B; font-size: 11px; }
+    .modal-btns { display: flex; flex-direction: column; gap: 8px; }
+
+    .badge-dest { position: absolute; top: 11px; right: 11px; background: var(--azul-bg); color: var(--azul); font-size: 10px; font-weight: 500; padding: 2px 9px; border-radius: var(--r-pill); }
+    .avatar { width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; margin-bottom: 10px; overflow: hidden; flex-shrink: 0; }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
+    /* carrusel de reseñas */
+    .resenas-wrap { margin: 10px 0; position: relative; overflow: hidden; }
+    .resenas-track { display: flex; transition: transform .5s cubic-bezier(.4,0,.2,1); }
+    .resena-slide { min-width: 100%; }
+    .resena-item {
+      background: var(--fondo); border-radius: var(--r);
+      padding: 8px 10px; font-size: 11px; color: var(--texto-2); line-height: 1.5;
+    }
+    .resena-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 3px; }
+    .resena-autor { font-weight: 600; color: var(--texto); font-size: 11px; }
+    .resena-stars { color: #F59E0B; font-size: 10px; letter-spacing: 1px; }
+    .resenas-dots { display: flex; justify-content: center; gap: 5px; margin-top: 7px; }
+    .resena-dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--borde); border: none; padding: 0; cursor: pointer;
+      transition: background .2s, transform .2s;
+    }
+    .resena-dot.active { background: var(--azul); transform: scale(1.3); }
+    .profe-nombre { font-size: 14px; font-weight: 600; margin-bottom: 2px; display: flex; align-items: center; gap: 5px; }
+    .check { width: 15px; height: 15px; border-radius: 50%; background: var(--azul); display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .check svg { width: 8px; height: 8px; }
+    .profe-materia { font-size: 12px; color: var(--texto-2); margin-bottom: 8px; }
+    .stars { font-size: 11px; color: #F59E0B; margin-bottom: 8px; }
+    .stars span { color: var(--texto-3); }
+    .tags { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 10px; }
+    .tag { font-size: 11px; padding: 2px 9px; background: var(--fondo); border: 1px solid var(--borde); border-radius: var(--r-pill); color: var(--texto-2); }
+    .precio { font-size: 12px; color: var(--texto-2); margin-bottom: 12px; }
+    .precio strong { font-size: 14px; color: var(--texto); }
+    .btn-wa {
+      display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%;
+      background: var(--verde-bg); color: var(--verde); border: 1px solid var(--verde-border); border-radius: var(--r);
+      padding: 8px; font-size: 12px; font-family: inherit; font-weight: 500;
+      cursor: pointer; text-decoration: none; transition: background .15s, transform .12s;
+    }
+    .btn-wa:hover { background: #DCFCE7; transform: scale(1.01); }
+    .wa-svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .btn-resena {
+      display: flex; align-items: center; justify-content: center; gap: 5px; width: 100%;
+      background: transparent; color: var(--texto-3); border: 1px solid var(--borde); border-radius: var(--r);
+      padding: 6px; font-size: 11px; font-family: inherit;
+      cursor: pointer; text-decoration: none; margin-top: 6px;
+      transition: color .15s, border-color .15s;
+    }
+    .btn-resena:hover { color: var(--texto-2); border-color: var(--texto-3); }
+
+    /* AD */
+    .ad-wrap { max-width: 740px; margin: 0 auto 48px; padding: 0 28px; }
+    .ad-inner { background: var(--blanco); border: 1px dashed var(--borde); border-radius: var(--r); padding: 14px; text-align: center; min-height: 90px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--texto-3); }
+
+    /* CTA */
+    .cta { max-width: 740px; margin: 0 auto 48px; padding: 0 28px; }
+    .cta-inner { background: var(--azul); border-radius: var(--r-lg); padding: 44px 32px; text-align: center; }
+    .cta-inner h2 { font-size: 24px; font-weight: 600; color: #fff; letter-spacing: -.4px; margin-bottom: 10px; }
+    .cta-inner p  { color: rgba(255,255,255,.72); font-size: 14px; margin-bottom: 24px; line-height: 1.6; }
+    .btn-blanco { background: #fff; color: var(--azul); border: none; border-radius: var(--r-pill); padding: 11px 26px; font-size: 14px; font-family: inherit; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; transition: transform .15s, opacity .15s; }
+    .btn-blanco:hover { transform: translateY(-2px); opacity: .9; }
+
+    /* CÓMO — estilos movidos a sección oscura arriba */
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--borde); padding: 20px 28px; text-align: center; font-size: 12px; color: var(--texto-3); }
+    footer a { color: var(--azul); text-decoration: none; }
+
+    /* SECCIÓN GRIS — por qué profelink */
+    .porque {
+      background: #F1F5F9;
+      padding: 56px 28px;
+      margin: 0 0 0 0;
+    }
+    .porque-inner { max-width: 740px; margin: 0 auto; }
+    .porque h2 { font-size: 17px; font-weight: 600; letter-spacing: -.3px; margin-bottom: 20px; }
+    .porque-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+    .porque-item {
+      background: var(--blanco); border-radius: var(--r-lg);
+      padding: 20px 18px; border: 1px solid var(--borde);
+      transition: transform .2s, border-color .2s;
+    }
+    .porque-item:hover { transform: translateY(-2px); border-color: var(--azul-border); }
+    .porque-icon { font-size: 26px; margin-bottom: 10px; }
+    .porque-item h3 { font-size: 13px; font-weight: 600; margin-bottom: 5px; }
+    .porque-item p  { font-size: 12px; color: var(--texto-2); line-height: 1.6; }
+
+    /* SECCIÓN AZUL — stats */
+    .stats-band {
+      background: var(--azul);
+      padding: 44px 28px;
+    }
+    .stats-band-inner { max-width: 740px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 28px; }
+    .stat-item { text-align: center; }
+    .stat-num { font-size: 36px; font-weight: 600; color: #fff; letter-spacing: -1px; display: block; line-height: 1; margin-bottom: 6px; }
+    .stat-label { font-size: 13px; color: rgba(255,255,255,.7); }
+
+    /* SECCIÓN OSCURA — como funciona */
+    .como {
+      background: #0F172A;
+      padding: 56px 28px;
+    }
+    .como-inner { max-width: 740px; margin: 0 auto; }
+    .como h2 { font-size: 17px; font-weight: 600; letter-spacing: -.3px; margin-bottom: 20px; color: #fff; }
+    .pasos { display: grid; grid-template-columns: repeat(auto-fit, minmax(165px, 1fr)); gap: 11px; }
+    .paso {
+      background: #1E293B; border: 1px solid #334155;
+      border-radius: var(--r-lg); padding: 18px 15px;
+      transition: border-color .2s, transform .2s;
+    }
+    .paso:hover { border-color: #475569; transform: translateY(-2px); }
+    .paso-num { font-size: 26px; font-weight: 600; color: var(--azul); opacity: .5; line-height: 1; margin-bottom: 10px; }
+    .paso h3 { font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #F1F5F9; }
+    .paso p  { font-size: 12px; color: #94A3B8; line-height: 1.6; }
+      .nav-links { display: none; }
+      .hero { padding: 48px 20px 36px; }
+      .cta-inner { padding: 32px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">profe<span>link</span></a>
+  <ul class="nav-links">
+    <li><a href="#profes">Buscar profe</a></li>
+    <li><a href="#como">¿Cómo funciona?</a></li>
+    <li><a href="https://forms.gle/A7881tXFwwAtLjhx5" target="_blank">¿Eres maestro?</a></li>
+  </ul>
+</nav>
+
+<div class="hero-wrap">
+<section class="hero">
+  <div class="hero-badge a1"><span class="live"></span>Plataforma gratuita para alumnos y maestros</div>
+  <h1 class="a2">Encuentra al <span class="hl">profe ideal</span><br>y escríbele hoy</h1>
+  <p class="a3">Clases particulares, online o a domicilio.<br>Contacta directo por WhatsApp, sin intermediarios.</p>
+  <div class="hero-btns a4">
+    <button onclick="irABuscar()" class="btn-primary">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      Buscar un profe
+    </button>
+
+    <a href="https://forms.gle/A7881tXFwwAtLjhx5" target="_blank" class="btn-outline">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      Soy maestro
+    </a>
+  </div>
+</section>
+<div class="scroll-hint" onclick="irABuscar()" title="Ver maestros">
+  <svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <polyline points="2,2 14,13 26,2" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+</div>
+
+<div class="search-wrap a5 reveal">
+  <div class="search-box" id="search-box">
+    <input type="text" id="q" placeholder="Ej: inglés B2 presencial, matemáticas universidad, guitarra online..." oninput="buscar()">
+    <button onclick="buscar()">Buscar</button>
+  </div>
+  <div class="filters">
+    <button class="filter-tag active" onclick="setTag(this,'')">Todos</button>
+    <button class="filter-tag" onclick="setTag(this,'Online')">Online</button>
+    <button class="filter-tag" onclick="setTag(this,'A domicilio')">A domicilio</button>
+    <button class="filter-tag" onclick="setTag(this,'Presencial')">Presencial</button>
+    <button class="filter-tag" onclick="setTag(this,'Primaria')">Primaria</button>
+    <button class="filter-tag" onclick="setTag(this,'Secundaria')">Secundaria</button>
+    <button class="filter-tag" onclick="setTag(this,'Preparatoria')">Preparatoria</button>
+    <button class="filter-tag" onclick="setTag(this,'Universidad')">Universidad</button>
+  </div>
+</div>
+
+<div class="ad-wrap reveal">
+  <div class="ad-inner">
+    <!-- Pega aquí tu bloque de Google AdSense cuando lo tengas aprobado -->
+    Publicidad
+  </div>
+</div>
+
+<section class="profes-section reveal" id="profes">
+  <div class="section-head">
+    <h2>Maestros registrados</h2>
+    <span id="contador"></span>
+  </div>
+  <div class="profes-grid" id="grid"></div>
+</section>
+
+<div class="ad-wrap reveal">
+  <div class="ad-inner">
+    <!-- Segundo bloque de Google AdSense -->
+    Publicidad
+  </div>
+</div>
+
+<section class="cta reveal" id="registro">
+  <div class="cta-inner">
+    <h2>¿Eres maestro?<br>Tu perfil, gratis.</h2>
+    <p>Regístrate en 5 minutos y empieza a recibir<br>mensajes de alumnos interesados.</p>
+    <a href="https://forms.gle/A7881tXFwwAtLjhx5" target="_blank" class="btn-blanco">Registrar mi perfil →</a>
+  </div>
+</section>
+
+<!-- SECCIÓN GRIS: POR QUÉ PROFELINK -->
+<div class="porque reveal">
+  <div class="porque-inner">
+    <h2>¿Por qué Profelink?</h2>
+    <div class="porque-grid">
+      <div class="porque-item reveal-left" style="transition-delay:.05s">
+        <div class="porque-icon">💬</div>
+        <h3>Contacto directo</h3>
+        <p>Sin intermediarios. Hablas directamente con el maestro por WhatsApp desde el primer momento.</p>
+      </div>
+      <div class="porque-item reveal-left" style="transition-delay:.12s">
+        <div class="porque-icon">✅</div>
+        <h3>Perfiles verificados</h3>
+        <p>Cada maestro es revisado antes de publicarse. Ves reseñas reales de alumnos reales.</p>
+      </div>
+      <div class="porque-item reveal-right" style="transition-delay:.05s">
+        <div class="porque-icon">🎓</div>
+        <h3>Todas las materias</h3>
+        <p>Desde matemáticas hasta guitarra. Online, presencial o a domicilio. Tú eliges.</p>
+      </div>
+      <div class="porque-item reveal-right" style="transition-delay:.12s">
+        <div class="porque-icon">🆓</div>
+        <h3>100% gratis para alumnos</h3>
+        <p>Sin registro, sin suscripción, sin comisiones. Buscas, encuentras y contactas gratis.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BANDA AZUL: STATS -->
+<div class="stats-band reveal">
+  <div class="stats-band-inner">
+    <div class="stat-item reveal" style="transition-delay:.0s">
+      <span class="stat-num">0%</span>
+      <span class="stat-label">Comisión para alumnos</span>
+    </div>
+    <div class="stat-item reveal" style="transition-delay:.1s">
+      <span class="stat-num">5 min</span>
+      <span class="stat-label">Para registrar tu perfil</span>
+    </div>
+    <div class="stat-item reveal" style="transition-delay:.2s">
+      <span class="stat-num">+15</span>
+      <span class="stat-label">Materias disponibles</span>
+    </div>
+    <div class="stat-item reveal" style="transition-delay:.3s">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Maestros revisados</span>
+    </div>
+  </div>
+</div>
+
+<!-- SECCIÓN OSCURA: CÓMO FUNCIONA -->
+<section class="como reveal" id="como">
+  <div class="como-inner">
+    <h2>¿Cómo funciona?</h2>
+    <div class="pasos">
+      <div class="paso reveal" style="transition-delay:.05s"><div class="paso-num">01</div><h3>Busca tu materia</h3><p>Escribe lo que necesitas — materia, nivel, modalidad. El buscador entiende lenguaje natural.</p></div>
+      <div class="paso reveal" style="transition-delay:.12s"><div class="paso-num">02</div><h3>Revisa el perfil</h3><p>Lee reseñas de otros alumnos y conoce la experiencia del maestro antes de escribirle.</p></div>
+      <div class="paso reveal" style="transition-delay:.19s"><div class="paso-num">03</div><h3>Escríbele por WhatsApp</h3><p>Un toque y abres WhatsApp. Sin registro, sin comisiones. Tú y el profe acuerdan todo.</p></div>
+      <div class="paso reveal" style="transition-delay:.26s"><div class="paso-num">04</div><h3>¡A aprender!</h3><p>El maestro decide sus horarios y precio. Sin plataforma en medio.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Profelink · <a href="mailto:alex705032n@gmail.com">alex705032n@gmail.com</a></p>
+</footer>
+
+<script>
+/* ════════════════════════════════════════════════════
+   LISTA DE MAESTROS
+   Para agregar un profe, copia el bloque de ejemplo,
+   llena los datos y pégalo dentro del array PROFES.
+   Cada vez que agregues uno, sube el archivo a GitHub.
+════════════════════════════════════════════════════ */
+const PROFES = [
+
+  {
+    nombre:      "María González",
+    iniciales:   "MG",
+    foto:        "",
+    color_bg:    "#EFF6FF",
+    color_txt:   "#1D4ED8",
+    materia:     "Matemáticas · Preparatoria y Universidad",
+    descripcion: "cálculo álgebra geometría trigonometría estadística UNAM Politécnico examen",
+    estrellas:   5,
+    resenas: [
+      { autor: "Carlos M.",   estrellas: 5, texto: "Excelente maestra, me explicó cálculo de una forma muy clara." },
+      { autor: "Sofía R.",    estrellas: 5, texto: "Me ayudó a pasar mi examen final después de que ya iba reprobando." },
+      { autor: "Luis T.",     estrellas: 4, texto: "Muy buena, puntual y paciente con mis dudas." },
+      { autor: "Andrea V.",   estrellas: 5, texto: "La recomiendo ampliamente, sabe explicar muy bien." },
+      { autor: "Diego H.",    estrellas: 5, texto: "Gracias a ella pasé álgebra lineal en la universidad." },
+      { autor: "Fernanda C.", estrellas: 4, texto: "Buena maestra, se nota que domina el tema." },
+      { autor: "Ricardo P.",  estrellas: 5, texto: "Muy accesible y siempre dispuesta a resolver dudas." },
+      { autor: "Valeria N.",  estrellas: 5, texto: "Me preparó para el examen de admisión y quedé." },
+      { autor: "Omar S.",     estrellas: 4, texto: "Explica paso a paso, no deja ninguna duda sin resolver." },
+      { autor: "Daniela F.",  estrellas: 5, texto: "La mejor maestra de matemáticas que he tenido." },
+      { autor: "Héctor L.",   estrellas: 5, texto: "Me salvó el semestre, súper recomendada." },
+      { autor: "Paulina G.",  estrellas: 4, texto: "Muy buena explicando trigonometría, que es lo más difícil." },
+      { autor: "Iván R.",     estrellas: 5, texto: "Puntual, clara y muy profesional. Volveré a tomar clases." },
+      { autor: "Mariana B.",  estrellas: 5, texto: "Excelente, aprendí más en dos semanas que en todo el semestre." },
+      { autor: "Tomás E.",    estrellas: 5, texto: "Muy recomendable, tiene mucha paciencia con los que somos lentos." },
+    ],
+    tags:       ["Presencial", "Online", "Preparatoria", "Universidad"],
+    whatsapp:   "524491234567",
+    verificado: true,
+    destacado:  true,
+  },
+
+  /* ── PLANTILLA — copia esto por cada profe nuevo ──
+  {
+    nombre:      "Nombre Apellido",
+    iniciales:   "NA",                          // se muestra si no hay foto
+    foto:        "",                            // link directo de imgbb o imgur. Dejar "" si no tiene foto
+    color_bg:    "#EFF6FF",                     // fondo del avatar sin foto
+    color_txt:   "#1D4ED8",                     // letra del avatar sin foto
+    materia:     "Materia · Nivel (ej: Matemáticas · Preparatoria)",
+    descripcion: "palabras clave extra para búsqueda: cálculo, álgebra, UNAM",
+    estrellas:   5,                             // promedio del 1 al 5
+    resenas: [                                  // lista de reseñas reales. Dejar [] si no hay
+      { autor: "Juan P.", estrellas: 5, texto: "Excelente maestra, muy paciente." },
+      { autor: "Ana R.",  estrellas: 4, texto: "Buena explicación, recomendada." },
+    ],
+    tags:        ["Online", "A domicilio"],     // modalidades y niveles
+    whatsapp:    "521XXXXXXXXXX",               // número completo sin + ni espacios
+    verificado:  false,                         // true = aparece palomita azul
+    destacado:   false,                         // true = aparece badge "Destacado"
+  },
+  ── FIN DE PLANTILLA ── */
+
+];
+
+/* ── Colores disponibles para avatares ──
+   azul:   color_bg "#EFF6FF"  color_txt "#1D4ED8"
+   verde:  color_bg "#F0FDF4"  color_txt "#15803D"
+   naranja:color_bg "#FFF7ED"  color_txt "#C2410C"
+   morado: color_bg "#F5F3FF"  color_txt "#6D28D9"
+   rosa:   color_bg "#FDF2F8"  color_txt "#9D174D"
+   gris:   color_bg "#F8FAFC"  color_txt "#475569"
+*/
+
+const WA = `<svg class="wa-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.119.553 4.107 1.52 5.836L.057 23.998l6.306-1.645A11.934 11.934 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.802 9.802 0 0 1-5.003-1.373l-.359-.214-3.741.975.999-3.648-.234-.374A9.788 9.788 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>`;
+
+const CHECK = `<span class="check" title="Verificado"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>`;
+
+let tagActivo = '';
+
+function render(lista) {
+  const grid = document.getElementById('grid');
+  const cnt  = document.getElementById('contador');
+
+  if (!lista.length) {
+    cnt.textContent = '';
+    grid.innerHTML = `
+      <div class="empty-state">
+        <div class="empty-icon">📋</div>
+        <h3>${PROFES.length === 0 ? 'Aún no hay maestros registrados' : 'Sin resultados para esa búsqueda'}</h3>
+        <p>${PROFES.length === 0
+          ? 'Sé el primero en publicar tu perfil.<br>Es gratis y toma 5 minutos.'
+          : 'Intenta con otra materia o quita los filtros.'}</p>
+        <a href="https://forms.gle/A7881tXFwwAtLjhx5" target="_blank" class="btn-primary" style="font-size:13px;padding:9px 20px;border-radius:999px;display:inline-flex;">
+          Registrar mi perfil →
+        </a>
+      </div>`;
+    return;
+  }
+
+  cnt.textContent = `${lista.length} maestro${lista.length !== 1 ? 's' : ''}`;
+  listaActual = lista;
+  grid.innerHTML = lista.map((p, i) => {
+    const msg      = encodeURIComponent(`Hola ${p.nombre.split(' ')[0]}, te encontré en Profelink y me interesa tomar clases contigo.`);
+    const resenaUrl = `https://forms.gle/b1DMRjJJRpBWsXxz8`;
+
+    // avatar: foto real o círculo con iniciales
+    const avatarHtml = p.foto
+      ? `<div class="avatar"><img src="${p.foto}" alt="Foto de ${p.nombre}" onerror="this.parentElement.innerHTML='${p.iniciales}';this.parentElement.style.background='${p.color_bg}';this.parentElement.style.color='${p.color_txt}'"></div>`
+      : `<div class="avatar" style="background:${p.color_bg};color:${p.color_txt}">${p.iniciales}</div>`;
+
+    // estrellas del promedio
+    const totalResenas = Array.isArray(p.resenas) ? p.resenas.length : 0;
+    const promedio     = totalResenas > 0
+      ? Math.round(p.resenas.reduce((s, r) => s + r.estrellas, 0) / totalResenas)
+      : (p.estrellas || 0);
+    const stars = '★'.repeat(promedio) + '☆'.repeat(5 - promedio);
+
+    // lista de reseñas como carrusel de pares
+    let resenasHtml = '';
+    if (totalResenas > 0) {
+      // agrupa de 2 en 2 para mostrar dos por slide
+      const pares = [];
+      for (let j = 0; j < p.resenas.length; j += 2) pares.push(p.resenas.slice(j, j + 2));
+      const slides = pares.map(par =>
+        `<div class="resena-slide">${par.map(r => `
+          <div class="resena-item">
+            <div class="resena-top">
+              <span class="resena-autor">${r.autor}</span>
+              <span class="resena-stars">${'★'.repeat(r.estrellas)}${'☆'.repeat(5-r.estrellas)}</span>
+            </div>
+            <div>${r.texto}</div>
+          </div>`).join('<div style="height:6px"></div>')}</div>`
+      ).join('');
+      const dots = pares.length > 1
+        ? `<div class="resenas-dots">${pares.map((_, di) =>
+            `<button class="resena-dot${di===0?' active':''}" onclick="slideResena(this,${di})" aria-label="Reseña ${di+1}"></button>`
+          ).join('')}</div>`
+        : '';
+      resenasHtml = `<div class="resenas-wrap" data-slide="0"><div class="resenas-track">${slides}</div>${dots}</div>`;
+    }
+
+    return `
+    <div class="profe-card card-in" style="animation-delay:${i * 0.06}s" onclick="abrirModal(${i})">
+      ${p.destacado ? '<span class="badge-dest">Destacado</span>' : ''}
+      ${avatarHtml}
+      <div class="profe-nombre">${p.nombre}${p.verificado ? CHECK : ''}</div>
+      <div class="profe-materia">${p.materia}</div>
+      <div class="stars">${stars} <span>(${totalResenas} reseña${totalResenas !== 1 ? 's' : ''})</span></div>
+      <div class="tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+      ${resenasHtml}
+      <a href="https://wa.me/${p.whatsapp}?text=${msg}" class="btn-wa" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+        ${WA} Contactar por WhatsApp
+      </a>
+      <a href="${resenaUrl}" class="btn-resena" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+        ★ Dejar una reseña
+      </a>
+    </div>`;
+  }).join('');
+}
+
+function irABuscar() {
+  const box = document.getElementById('search-box');
+  box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  // pulso sutil en la barra
+  setTimeout(() => {
+    box.classList.add('search-pulse');
+    box.querySelector('input').focus();
+    box.addEventListener('animationend', () => box.classList.remove('search-pulse'), { once: true });
+  }, 400);
+}
+
+function buscar() {
+  const raw = document.getElementById('q').value.toLowerCase();
+  const palabras = raw.split(/\s+/).filter(Boolean);
+  render(PROFES.filter(p => {
+    const t = (p.nombre + ' ' + p.materia + ' ' + p.tags.join(' ') + ' ' + (p.descripcion || '')).toLowerCase();
+    const matchQ   = palabras.length === 0 || palabras.every(w => t.includes(w));
+    const matchTag = !tagActivo || p.tags.includes(tagActivo);
+    return matchQ && matchTag;
+  }));
+  // scroll a resultados solo si hay texto
+  if (raw.trim()) {
+    document.getElementById('profes').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function setTag(el, val) {
+  document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  tagActivo = val;
+  buscar();
+}
+
+// ── MODAL ──
+let listaActual = [];
+
+function abrirModal(idx) {
+  const p = listaActual[idx];
+  if (!p) return;
+
+  const msg = encodeURIComponent(`Hola ${p.nombre.split(' ')[0]}, te encontré en Profelink y me interesa tomar clases contigo.`);
+  const resenaUrl = 'https://forms.gle/b1DMRjJJRpBWsXxz8';
+  const totalResenas = Array.isArray(p.resenas) ? p.resenas.length : 0;
+  const promedio = totalResenas > 0
+    ? Math.round(p.resenas.reduce((s, r) => s + r.estrellas, 0) / totalResenas)
+    : (p.estrellas || 0);
+  const stars = '★'.repeat(promedio) + '☆'.repeat(5 - promedio);
+
+  const avatarHtml = p.foto
+    ? `<div class="modal-avatar"><img src="${p.foto}" alt="${p.nombre}"></div>`
+    : `<div class="modal-avatar" style="background:${p.color_bg};color:${p.color_txt}">${p.iniciales}</div>`;
+
+  const resenasHtml = totalResenas > 0
+    ? `<div class="modal-divider"></div>
+       <div class="modal-resenas-title">Reseñas (${totalResenas})</div>
+       <div class="modal-resenas-list">
+         ${p.resenas.map(r => `
+           <div class="modal-resena">
+             <div class="modal-resena-top">
+               <span class="modal-resena-autor">${r.autor}</span>
+               <span class="modal-resena-stars">${'★'.repeat(r.estrellas)}${'☆'.repeat(5-r.estrellas)}</span>
+             </div>
+             <div>${r.texto}</div>
+           </div>`).join('')}
+       </div>`
+    : '';
+
+  const backdrop = document.createElement('div');
+  backdrop.className = 'modal-backdrop';
+  backdrop.id = 'modalBackdrop';
+  backdrop.innerHTML = `
+    <div class="modal-card" role="dialog" aria-modal="true">
+      <button class="modal-close" onclick="cerrarModal()" aria-label="Cerrar">✕</button>
+      ${avatarHtml}
+      <div class="modal-nombre">
+        ${p.nombre}
+        ${p.verificado ? CHECK : ''}
+        ${p.destacado ? '<span class="badge-dest" style="position:static;margin-left:4px">Destacado</span>' : ''}
+      </div>
+      <div class="modal-materia">${p.materia}</div>
+      <div class="modal-stars">${stars} <span>(${totalResenas} reseña${totalResenas !== 1 ? 's' : ''})</span></div>
+      <div class="modal-tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+      <div class="modal-btns">
+        <a href="https://wa.me/${p.whatsapp}?text=${msg}" class="btn-wa" target="_blank" rel="noopener">
+          ${WA} Contactar por WhatsApp
+        </a>
+        <a href="${resenaUrl}" class="btn-resena" target="_blank" rel="noopener">
+          ★ Dejar una reseña
+        </a>
+      </div>
+      ${resenasHtml}
+    </div>`;
+
+  backdrop.addEventListener('click', e => { if (e.target === backdrop) cerrarModal(); });
+  document.body.appendChild(backdrop);
+}
+
+function cerrarModal() {
+  const backdrop = document.getElementById('modalBackdrop');
+  if (!backdrop) return;
+  document.body.style.overflow = '';
+  backdrop.style.animation = 'backdropIn .18s reverse both';
+  backdrop.querySelector('.modal-card').style.animation = 'modalIn .18s reverse both';
+  setTimeout(() => backdrop.remove(), 180);
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrarModal(); });
+
+function slideResena(dotEl, idx) {
+  const wrap  = dotEl.closest('.resenas-wrap');
+  const track = wrap.querySelector('.resenas-track');
+  track.style.transform = `translateX(-${idx * 100}%)`;
+  wrap.dataset.slide = idx;
+  wrap.querySelectorAll('.resena-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
+}
+
+// auto-rotate cada 4 segundos
+setInterval(() => {
+  document.querySelectorAll('.resenas-wrap').forEach(wrap => {
+    const dots = wrap.querySelectorAll('.resena-dot');
+    if (dots.length < 2) return;
+    const cur  = parseInt(wrap.dataset.slide || 0);
+    const next = (cur + 1) % dots.length;
+    slideResena(dots[next], next);
+  });
+}, 4000);
+
+// ── SCROLL REVEAL ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+
+// Re-observe after render since grid is dynamic
+const origRender = render;
+
+render(PROFES);
+</script>
+</body>
+</html>
